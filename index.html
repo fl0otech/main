@@ -13,7 +13,7 @@
 
     body {
       transition: background-color 0.3s, color 0.3s;
-      background-color: #ffffff;
+      background-color: #000000;
       margin: 0;
       padding: 0;
       display: flex;
@@ -21,16 +21,7 @@
       justify-content: center;
       height: 100vh;
     }
-      /* Light mode styles */
-      body.light-mode {
-      background-color: #ffffff;
-      color: #333333;
-    }
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #000000;
-      color: #ffffff;
-    }
+    
     .container {
       text-align: center;
     }
@@ -38,35 +29,15 @@
     h1 {
       font-family: cyber;
       font-size: 2.5em;
-      color: #333;
       color: #ff00ee;
     }
   </style>
 </head>
-<body class="light-mode">
+<body>
 
 <div class="container">
   <h1>Work in progress . . . :]</h1>
   </div>
 </div>
-<div class="toggle-btn" onclick="toggleDarkMode()"></div>
-
-<script>
-  // Function to toggle between light and dark mode
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-
-    // Store the user's preference in local storage
-    const isDarkMode = body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
-  }
-
-  // Check for user's preference in local storage
-  const storedDarkMode = localStorage.getItem('darkMode');
-  if (storedDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-  }
-</script>
 </body>
 </html>
